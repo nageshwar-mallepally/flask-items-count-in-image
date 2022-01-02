@@ -1,0 +1,7 @@
+opencv-python
+numpy
+sklearn
+requests
+flask
+gunicorn
+matplotlib

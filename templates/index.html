@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<!From https://codepen.io/frytyler/pen/EGdtg>
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+<div class="login">
+    <div><h2 style="color: green;font-family: math"> Count items in Image </h2>
+    </div>
+
+    <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+        <input id="file" type="file" name="file" placeholder="Select image" required="required"/>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Count Items</button>
+    </form>
+    <br><br>
+    {{ image_name }}
+    <br><br>
+    <img id="picture1" src="data:image/jpeg;base64,{{ uploaded_image }}" alt="No Image">
+    <br><br>
+    {{ prediction_text }}
+</div>
+</body>
+</html>
