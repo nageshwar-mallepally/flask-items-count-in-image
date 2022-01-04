@@ -14,19 +14,19 @@
 <body>
 <div>
 <div class="login">
-    <div><h2 style="color: green;font-family: math"> Count items in Image using method-1</h2>
+    <div><h2 style="color: green;font-family: math"> Count items in Image using method-2 </h2>
     </div>
 
-    <form action="{{ url_for('predict1')}}" method="post" enctype="multipart/form-data">
-        <input id="file1" type="file" name="file" placeholder="Select image" required="required"/>
+    <form action="{{ url_for('predict2')}}" method="post" enctype="multipart/form-data">
+        <input id="file2" type="file" name="file" placeholder="Select image" required="required"/>
         <button type="submit" class="btn btn-primary btn-block btn-large">Count Items</button>
     </form>
     <br><br>
-    {{ image_name1 }}
+    {{ image_name2 }}
     <br><br>
-    <img id="picture11" src="data:image/jpeg;base64,{{ uploaded_image1 }}" alt="No Image">
+    <img id="picture12" src="data:image/jpeg;base64,{{ uploaded_image2 }}" alt="No Image">
     <br><br>
-    {{ prediction_text1 }}
+    {{ prediction_text2 }}
 </div>
 </div>
 </body>

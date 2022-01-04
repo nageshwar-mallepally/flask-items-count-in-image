@@ -27,7 +27,7 @@ body {
 	
 }
 .login {
-    display: inline-table;
+	display: inline-table;
 	top: 5%;
 	left:38%;
 	width:400px;
